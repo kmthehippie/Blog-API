@@ -89,7 +89,7 @@ app.use(function(err,req,res,next){
     res.status(err.status || 500).json({title: "Error", error: err.message})
 })
 
-app.listen(port, ()=>{
+app.listen(port, "::", ()=>{
     "App is listening on port ",port
 })
 //Export App
