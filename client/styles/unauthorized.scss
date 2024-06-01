@@ -1,0 +1,19 @@
+.unauth {
+    text-align: center;
+
+    h1 {
+        font-family: var(--font-lora);
+        text-align: center;
+        color: var(--peach);
+        font-weight: 700;
+    }
+
+    button {
+        background-color: var(--dark-blue);
+        width: 120px;
+    }
+
+    button:hover {
+        background-color: var(--peach);
+    }
+}

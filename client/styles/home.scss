@@ -1,0 +1,32 @@
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .home-head {
+        width: 1128px;
+        max-width: 100%;
+        text-align: left;
+        padding-left: 3rem;
+
+        h1 {
+            font-family: var(--font-lora);
+            font-weight: 700;
+            color: var(--peach);
+        }
+
+        h4 {
+            width: 400px;
+            font-family: var(--font-lora);
+            font-weight: 300;
+            color: var(--dark-blue);
+        }
+    }
+}
+
+.hero-img {
+    height: 550px;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}

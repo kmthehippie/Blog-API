@@ -1,0 +1,114 @@
+:root {
+    margin: 0;
+    padding: 0;
+    --font-noto-sans: "Poppins", serif;
+    --font-lora: "Poppins", serif;
+    --font-allura: "Josefin Slab", "Comic Sans";
+    --light-purple: rgba(164, 153, 207, 1);
+    --pink: rgba(248, 191, 201, 1);
+    --dark-purple: rgba(120, 95, 175, 1);
+    --cream: rgba(254, 245, 242, 1);
+    --peach: rgba(255, 199, 199, 1);
+    --dark-blue: rgba(135, 133, 162, 1);
+    --light-blue: rgba(227, 235, 244, 1);
+    --light-gray: rgba(246, 246, 246, 1);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+div {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: var(--font-allura);
+    color: black;
+    font-weight: 300;
+}
+
+ul {
+    background-color: none;
+}
+
+li {
+    list-style-type: none;
+    font-family: var(--font-noto-sans);
+    font-weight: 300;
+    color: black;
+}
+
+p {
+    font-family: var(--font-noto-sans);
+}
+
+a {
+    font-family: var(--font-noto-sans);
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    transition: 0.5s;
+    color: var(--black);
+}
+
+
+button {
+    cursor: pointer;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    // background: radial-gradient(circle, var(--dark-purple) 0%, var(--cream) 90%);
+    color: var(--cream);
+    border-radius: 0.5rem;
+    background-color: var(--dark-blue);
+    box-shadow: 5px 5px 3rem 0.25rem var(--cream);
+}
+
+button:hover {
+    transition: 0.5s;
+    background-color: var(--peach);
+}
+
+button:disabled {
+    // background: radial-gradient(circle, var(--cream), rgb(148, 148, 148));
+    color: #666;
+}
+
+.layout {
+    width: clamp(400px, 100%, 1200px);
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--light-gray);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    font-size: 0.75rem;
+    height: 2rem;
+}
+
+
+.App {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}

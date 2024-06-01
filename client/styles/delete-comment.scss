@@ -1,0 +1,44 @@
+.delete-comment-form {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+
+    p {
+        font-weight: 300;
+        font-size: 0.8rem;
+        font-style: italic;
+    }
+
+    .username {
+        font-family: var(--font-lora);
+        font-size: 1.5rem;
+        color: var(--peach);
+        font-weight: 700;
+        font-style: normal;
+
+        p {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .comment-details {
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        margin: 2rem 0;
+        border: 0.5px solid rgba(141, 141, 141, 0.5);
+    }
+
+    .span {
+        margin: 1rem;
+    }
+
+    button {
+        background-color: var(--dark-blue);
+        width: 80px;
+    }
+
+    button:hover {
+        background-color: var(--peach);
+    }
+}

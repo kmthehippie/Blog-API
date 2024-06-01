@@ -1,0 +1,30 @@
+form {
+    text-align: center;
+    width: 100%;
+
+    .form-block {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: left;
+        padding: 1rem;
+        width: 100%;
+
+
+        label {
+            font-family: var(--font-noto-sans);
+            font-weight: 300;
+            color: gray;
+        }
+
+        input,
+        select {
+            margin: 0;
+            width: 80%;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(161, 161, 161, 0.5);
+            padding: 0.65rem;
+            z-index: 2;
+        }
+    }
+}
