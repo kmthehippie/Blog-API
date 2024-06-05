@@ -10,11 +10,14 @@ const allowedOrigins = require("./config/allowed_origins")
 const RateLimit =require("express-rate-limit");
 const cors = require("cors")
 const credentials = require("./middleware/credentials")
+const path = require("path"); 
 
 require("dotenv").config();
 
 //Reusable info
 const port = process.env.PORT
+
+
 
 //Set up limiter
 const limiter = RateLimit({
@@ -41,6 +44,13 @@ const app = express()
 // Handle options credentials check - before CORS!
 // and fetch cookies credentials requirement
 app.use(credentials)
+
+//Trust first proxy--Fly.io load balancer
+app.set("trust proxy", 1)
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, '/client/dist')));
+
 
 //Cors setup 
 //TODO: add in correct origin (http://www.fly.io/???) into the allowedOrigins fn.
@@ -89,7 +99,12 @@ app.use(function(err,req,res,next){
     res.status(err.status || 500).json({title: "Error", error: err.message})
 })
 
-app.listen(port, "::", ()=>{
+//Server serves build from react catch all
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  });
+
+app.listen(port, ()=>{
     "App is listening on port ",port
 })
 //Export App

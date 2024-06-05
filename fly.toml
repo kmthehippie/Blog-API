@@ -1,15 +1,13 @@
-# fly.toml app configuration file generated for km-blog-app-2024 on 2024-06-01T19:44:54+08:00
+# fly.toml app configuration file generated for km-blog-server-2024 on 2024-06-05T15:59:04+08:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'km-blog-app-2024'
+app = 'km-blog-server-2024'
 primary_region = 'sin'
 
-[build]
-
 [http_service]
-  internal_port = 3001
+  internal_port = 8080
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true

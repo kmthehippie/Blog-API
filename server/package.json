@@ -4,9 +4,9 @@
   "description": "A Blog API",
   "main": "server/app.js",
   "scripts": {
-    "dev": "nodemon server/app.js",
-    "start:server": "node server/app.js",
-    "start:client": "cd client && npm run dev",
+    "dev": "nodemon app.js",
+    "start:server": "node app.js",
+    "start:client": "cd .. && cd client && npm run build",
     "start": "concurrently \"npm run start:server\" \"npm run start:client\""
   },
   "repository": {
@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/kmthehippie/Blog-API#readme",
   "dependencies": {
-    "@tinymce/tinymce-react": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "concurrently": "^8.2.2",
@@ -36,7 +35,6 @@
     "express-session": "^1.18.0",
     "express-validator": "^7.0.1",
     "helmet": "^7.1.0",
-    "html-react-parser": "^5.1.10",
     "jsonwebtoken": "^9.0.2",
     "luxon": "^3.4.4",
     "mongoose": "^8.3.0",
