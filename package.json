@@ -5,10 +5,8 @@
   "main": "server/app.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "start:server": "node app.js",
-    "start:client": "cd .. && cd client && npm run build",
-    "start": "concurrently \"npm run start:server\" \"npm run start:client\""
-  },
+    "start": "node app.js"
+    },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/kmthehippie/Blog-API.git"
