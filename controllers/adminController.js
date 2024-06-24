@@ -295,6 +295,7 @@ exports.admin_comments_get = asyncHandler(async(req,res,next)=>{
     const commentId = req.params.commentId
     const postId = req.params.postId
     try{
+        console.log(commentId, postId)
         const prevComment = await Comment.findById(commentId)
         if(prevComment.user.toString() === userId){
             return res.status(200).json(prevComment)

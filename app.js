@@ -53,7 +53,6 @@ app.use(express.static(path.join(__dirname, '/client/dist')));
 
 
 //Cors setup 
-//TODO: add in correct origin (http://www.fly.io/???) into the allowedOrigins fn.
 const corsOptions = {
     origin: (origin, callback)=>{
         if(allowedOrigins.indexOf(origin) !== -1 || !origin){

@@ -39,7 +39,7 @@ exports.handle_refresh_token = asyncHandler(async (req, res) => {
                 }
             },
             process.env.ACCESS_TOKEN_SECRET,
-            { expiresIn: "15s" }
+            { expiresIn: "15m" }
         );
 
         // Return the new access token

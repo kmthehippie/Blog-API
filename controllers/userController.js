@@ -62,14 +62,14 @@ asyncHandler(async(req,res,next)=>{
                     }
                 },
                 process.env.ACCESS_TOKEN_SECRET,
-                {expiresIn: "15s"} //prev 15m
+                {expiresIn: "15m"} //prev 15m
                 )
                 const refreshToken = jwt.sign(
                     {"UserInfo": {
                             "username": user.username
                     }},
                     process.env.REFRESH_TOKEN_SECRET,
-                    {expiresIn: "60m"} //prev 1d
+                    {expiresIn: "1d"} //prev 1d
                 )
                 user.refreshToken = refreshToken
                 await user.save()
